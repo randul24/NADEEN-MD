@@ -19,7 +19,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Run Bot (loop & auto-restart if crash)
+      - name: Run Bot
         run: |
           echo "Running Nadeen bot in auto-restart mode..."
           timeout 18000 bash -c 'while true; do node nadeen.js || echo "Bot crashed, restarting..."; sleep 2; done'
